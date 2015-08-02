@@ -55,6 +55,17 @@
 						$Path = get_permalink();
 						$Title = get_the_title();
 						echo "<a href = '$Path'><h3> $Title </h3></a>";
+						$Categories = get_the_category();
+						$Separator = ' ';
+						$Output = '';
+						echo "<h4>";
+						if ( ! empty( $Categories ) ) {
+						    foreach( $Categories as $Category ) {
+						        $Output .= '<a href="' . esc_url( get_category_link( $Category->term_id ) ) . '">' . '<span class="label label-'. esc_html( $Category->slug ) . '">' . esc_html( $Category->name ) .'</span></a>' . $Separator;
+						    }
+						    echo trim( $Output, $Separator );
+						}
+						echo "</h4>";
 						$Date = get_the_date();
 						echo "<h5> $Date </h5>";
 						the_content();
