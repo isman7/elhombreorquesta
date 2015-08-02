@@ -90,3 +90,12 @@ a:focus {
 }
 
 /* End Centering Jumbotron*/
+
+
+/* Justifying pre */
+
+pre {
+	text-align: left;
+}
+
+
