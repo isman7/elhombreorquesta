@@ -13,11 +13,16 @@
 
     <title><?php bloginfo( 'name' ); ?></title>
 
+	<!--Prettify-->
+    <link href="<?php echo get_template_directory_uri(); ?>/src/css/prettify.css" type="text/css" rel="stylesheet" />
+    <script src="<?php echo get_template_directory_uri(); ?>/src/js/prettify.js"></script>
+    
+
     <!-- Bootstrap CSS -->
     <link href="<?php echo get_template_directory_uri(); ?>/src/css/bootstrap.css" rel="stylesheet">
     <link href="<?php echo get_template_directory_uri(); ?>/src/css/bootstrap.css" rel="stylesheet">
     <!-- Styles core CSS -->
-    <link href="<?php echo get_template_directory_uri(); ?>/styles.css" rel="stylesheet">
+    <link href="<?php echo get_template_directory_uri(); ?>/style.css" rel="stylesheet">
    
     <link href="<?php echo get_template_directory_uri(); ?>/src/css/version.css" rel="stylesheet">
    
@@ -27,9 +32,6 @@
     <!--Jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
     
-    <!--Prettify-->
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/src/prettify/prettify.js"></script>
-    <link href="<?php echo get_template_directory_uri(); ?>/src/prettify/prettify.css" type="text/css" rel="stylesheet" />
     
   </head>
 
