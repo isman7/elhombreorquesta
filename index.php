@@ -14,15 +14,15 @@
     <title><?php bloginfo( 'name' ); ?></title>
 
     <!-- Bootstrap CSS -->
-    <link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.css" rel="stylesheet">
-    <link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo get_template_directory_uri(); ?>/src/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo get_template_directory_uri(); ?>/src/css/bootstrap.css" rel="stylesheet">
     <!-- Styles core CSS -->
     <link href="<?php echo get_template_directory_uri(); ?>/styles.css" rel="stylesheet">
    
-    <link href="<?php echo get_template_directory_uri(); ?>/css/version.css" rel="stylesheet">
+    <link href="<?php echo get_template_directory_uri(); ?>/src/css/version.css" rel="stylesheet">
    
     <!--Bootstrap JS-->
-    <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/src/js/bootstrap.min.js"></script>
 
     <!--Jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
