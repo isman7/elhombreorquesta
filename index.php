@@ -9,26 +9,22 @@
     <meta name="author" content="">
     <!-- <link rel="icon" href="../../favicon.ico"> -->
     
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    
 
     <title><?php bloginfo( 'name' ); ?></title>
 
+	<!--Google Fonts-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<!--Prettify-->
     <link href="<?php echo get_template_directory_uri(); ?>/src/css/prettify.css" type="text/css" rel="stylesheet" />
     <script src="<?php echo get_template_directory_uri(); ?>/src/js/prettify.js"></script>
-    
-
     <!-- Bootstrap CSS -->
     <link href="<?php echo get_template_directory_uri(); ?>/src/css/bootstrap.css" rel="stylesheet">
-    <link href="<?php echo get_template_directory_uri(); ?>/src/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo get_template_directory_uri(); ?>/src/css/bootstrap-theme.css" rel="stylesheet">
     <!-- Styles core CSS -->
     <link href="<?php echo get_template_directory_uri(); ?>/style.css" rel="stylesheet">
-   
-    <link href="<?php echo get_template_directory_uri(); ?>/src/css/version.css" rel="stylesheet">
-   
     <!--Bootstrap JS-->
     <script src="<?php echo get_template_directory_uri(); ?>/src/js/bootstrap.min.js"></script>
-
     <!--Jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
     
