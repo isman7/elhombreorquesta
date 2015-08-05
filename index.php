@@ -12,11 +12,20 @@
     }
     ?>" />
     <meta name="author" content="Isman Siete (Ismael Benito)">
-    <!-- <link rel="icon" href="../../favicon.ico"> -->
     
+    <meta name="keywords" content="<?php if ( is_single() ) {
+        global $post;
+		foreach(get_the_tags($post->ID) as $tag) {
+		echo $tag->name . ', ';
+		}
+    } else {
+		echo "Ismael Benito, Isman Siete, divulgación científica, magia, programación, política, reflexión";	
+    }
+    ?>" />
     
-
     <title><?php bloginfo( 'name' ); ?></title>
+
+	<!-- <link rel="icon" href="../../favicon.ico"> -->
 
 	<!--Google Fonts-->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
