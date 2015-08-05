@@ -5,8 +5,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="<?php if ( is_single() ) {
+        single_post_title('', true); 
+    } else {
+        bloginfo('name'); echo " - "; bloginfo('description');
+    }
+    ?>" />
+    <meta name="author" content="Isman Siete (Ismael Benito)">
     <!-- <link rel="icon" href="../../favicon.ico"> -->
     
     
@@ -68,15 +73,19 @@
 						echo "</h4>";
 						$Date = get_the_date();
 						echo "<h5> $Date </h5>";
+						echo "<div class='row text-justify'>";
 						the_content();
+						echo "</div>&nbsp;";
 						
 						if (is_single()): 
-							
-							echo "<div class='col-lg-5'>";
+							echo "<div class='row text-justify'>";
+							the_tags();
+							echo "</div>&nbsp;";
+							echo "<div class='row'><div class='col-lg-5'>";
 							previous_post_link();
 							echo "</div>";
 							echo "<div class='col-lg-2'></div>";
-							echo "<div class='col-lg-5'>";
+							echo "<div class='col-lg-5'></div>";
 							next_post_link();
 							echo "</div>";
 						
