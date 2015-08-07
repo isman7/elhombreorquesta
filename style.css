@@ -42,7 +42,9 @@ a:focus {
 .voffset8 { margin-top: 100px; }
 .voffset9 { margin-top: 150px; }
 
-
+@media screen and (max-width: 768px) {
+	.voffset9 { margin-top: 50px; }
+}
 
 /* Custom page footer */
 .footer {
@@ -87,6 +89,10 @@ a:focus {
   .jumbotron {
     border-bottom: 0;
   }
+  
+  #principal .container {
+	margin-left: 0px;
+  }
 }
 
 /* End Centering Jumbotron*/
@@ -98,6 +104,22 @@ pre {
 	text-align: left;
 }
 
+#vcard {
+	background-color:#eee;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1200px) {
+  #vcard { display: none; }  /* show it on small screens */
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+  #vcard { 
+	font-size: 12px;
+  }
+  #vcard h4 {
+	font-size: 14px;
+  }
+}
 
 /* Adding more colors to buttons, labels and that stuff */
 

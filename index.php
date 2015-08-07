@@ -29,12 +29,14 @@
 
 	<!--Google Fonts-->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-	<!--Prettify-->
+	<!--Prettify CSS-->
     <link href="<?php echo get_template_directory_uri(); ?>/src/css/prettify.css" type="text/css" rel="stylesheet" />
     <script src="<?php echo get_template_directory_uri(); ?>/src/js/prettify.js"></script>
     <!-- Bootstrap CSS -->
     <link href="<?php echo get_template_directory_uri(); ?>/src/css/bootstrap.css" rel="stylesheet">
     <link href="<?php echo get_template_directory_uri(); ?>/src/css/bootstrap-theme.css" rel="stylesheet">
+    <!-- Font-Awesome CSS -->
+    <link href="<?php echo get_template_directory_uri(); ?>/src/css/font-awesome.css" rel="stylesheet">
     <!-- Styles core CSS -->
     <link href="<?php echo get_template_directory_uri(); ?>/style.css" rel="stylesheet">
     <!--Bootstrap JS-->
@@ -46,86 +48,140 @@
   </head>
 
   <body onload="prettyPrint()">
-
-    <div class="container">
-
-		<div class="jumbotron">
-	    
-	        
-			<?php 	$Site_url = get_site_url(); 
-					
-					echo "<h1><a href=" . "$Site_url" . ">";
-					bloginfo('name');
-					echo "</a></h1>"; 
-			?>
-			
-	        <h2><?php bloginfo( 'description' ); ?></h2>
-	  
-			<div class="container voffset8">
-				<?php if ( have_posts() ) : ?>
-	
-					<?php /* Start the Loop */ ?>
-					<?php  while ( have_posts() ) : the_post();
-						$Path = get_permalink();
-						$Title = get_the_title();
-						echo "<a href = '$Path'><h3> $Title </h3></a>";
-						$Categories = get_the_category();
-						$Separator = ' ';
-						$Output = '';
-						echo "<h4>";
-						if ( ! empty( $Categories ) ) {
-						    foreach( $Categories as $Category ) {
-						        $Output .= '<a href="' . esc_url( get_category_link( $Category->term_id ) ) . '">' . '<span class="label label-'. esc_html( $Category->slug ) . '">' . esc_html( $Category->name ) .'</span></a>' . $Separator;
-						    }
-						    echo trim( $Output, $Separator );
-						}
-						echo "</h4>";
-						$Date = get_the_date();
-						echo "<h5> $Date </h5>";
-						echo "<div class='row text-justify'>";
-						the_content();
-						echo "</div>&nbsp;";
-						
-						if (is_single()): 
-							echo "<div class='row text-justify'>";
-							the_tags();
-							echo "</div>&nbsp;";
-							echo "<div class='row'><div class='col-lg-5'>";
-							previous_post_link();
-							echo "</div>";
-							echo "<div class='col-lg-2'></div>";
-							echo "<div class='col-lg-5'></div>";
-							next_post_link();
-							echo "</div>";
-						
-						endif;
-						
-						endwhile;
-						?>
-			
-				<?php else : ?>
-					<header class="entry-header">
-						<h1 class="entry-title"> 404 </h1>
-					</header>
-	
-					<div class="entry-content">
-						<p>No te emociones, ¡qué aun estoy construyendo el Blog!</p> 
-						<p>Tomo nota, crear: 
-						
-						<?php $Path = "http://" .  $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]  . "/";
-						
-							echo "<a href='$Path'> $Path </a>";
-						
-						?></p>
-						
-					</div><!-- .entry-content -->
-			
-				
-			<?php endif; // end have_posts() check ?>
-			</div> 
+	<div class="row">
+		<div class="col-lg-4">
+			<div class="text-center">
+				<div class="row">
+					<div class="col-lg-3 col-sm-1"></div>
+					<div class="col-lg-7 col-sm-9 thumbnail voffset9" id="vcard">
+						<div class="row">
+							<div class="col-lg-6 col-md-7" style="margin-top: -40px;">
+							<a class="" href="" title="Isman Siete">
+								<img class="img-thumbnail img-responsive" src="https://avatars3.githubusercontent.com/u/9478220?v=3&s=460" width="" alt="">
+							</a>
+							</div>
+							<div class="col-lg-1"></div>
+							<div class="col-lg-5 text-left"  style="margin-top: -10px;">
+							<h4><strong>Ismael Benito</strong></h4>
+							<p>Intento de físico e ingeniero electrónico de telecomunicaciones. </p>
+							</div>
+						</div>
+						<div class="row">
+						<div class="col-md-1"></div>
+						<div class="col-md-10">
+						<ul class="media-list">
+							<li class="media">
+							<a href="https://twitter.com/ismansiete" target="blank">
+								<div class="media-left">
+									<i class="fa fa-twitter"></i>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">@ismansiete</h4>
+								</div>
+							</a>
+							</li>
+							<li class="media">
+							<a href="https://github.com/isman7" target="blank">
+								<div class="media-left">
+										<span class="fa fa-github"></span>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">isman7</h4>
+								</div>
+							</a>
+							</li>
+						</ul>
+						</div>
+						<div class="col-md-1"></div>
+						</div>
+					</div>
+					<div class="col-md-2"></div>
+				</div>
+			</div>
+		</div>
   
-      </div>
+  
+		
+		<div class="col-lg-8" id="principal">
+			<div class="container">
 
+				<div class="jumbotron">
+				
+					
+					<?php 	$Site_url = get_site_url(); 
+							
+							echo "<h1><a href=" . "$Site_url" . ">";
+							bloginfo('name');
+							echo "</a></h1>"; 
+					?>
+					
+					<h2><?php bloginfo( 'description' ); ?></h2>
+			  
+					<div class="container voffset8">
+						<?php if ( have_posts() ) : ?>
+			
+							<?php /* Start the Loop */ ?>
+							<?php  while ( have_posts() ) : the_post();
+								$Path = get_permalink();
+								$Title = get_the_title();
+								echo "<a href = '$Path'><h3> $Title </h3></a>";
+								$Categories = get_the_category();
+								$Separator = ' ';
+								$Output = '';
+								echo "<h4>";
+								if ( ! empty( $Categories ) ) {
+									foreach( $Categories as $Category ) {
+										$Output .= '<a href="' . esc_url( get_category_link( $Category->term_id ) ) . '">' . '<span class="label label-'. esc_html( $Category->slug ) . '">' . esc_html( $Category->name ) .'</span></a>' . $Separator;
+									}
+									echo trim( $Output, $Separator );
+								}
+								echo "</h4>";
+								$Date = get_the_date();
+								echo "<h5> $Date </h5>";
+								echo "<div class='row text-justify'>";
+								the_content();
+								echo "</div>&nbsp;";
+								
+								if (is_single()): 
+									echo "<div class='row text-justify'>";
+									the_tags();
+									echo "</div>&nbsp;";
+									echo "<div class='row'><div class='col-lg-5'>";
+									previous_post_link();
+									echo "</div>";
+									echo "<div class='col-lg-2'></div>";
+									echo "<div class='col-lg-5'></div>";
+									next_post_link();
+									echo "</div>";
+								
+								endif;
+								
+								endwhile;
+								?>
+					
+						<?php else : ?>
+							<header class="entry-header">
+								<h1 class="entry-title"> 404 </h1>
+							</header>
+			
+							<div class="entry-content">
+								<p>No te emociones, ¡qué aun estoy construyendo el Blog!</p> 
+								<p>Tomo nota, crear: 
+								
+								<?php $Path = "http://" .  $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]  . "/";
+								
+									echo "<a href='$Path'> $Path </a>";
+								
+								?></p>
+								
+							</div><!-- .entry-content -->
+					
+						
+					<?php endif; // end have_posts() check ?>
+					</div> 
+		  
+			  </div>
+		
 
 	<footer class="footer">
 	<p>
@@ -152,7 +208,8 @@
 
     </div> <!-- /container -->
 	
-	
+	</div>
+	</div>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
