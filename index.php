@@ -81,7 +81,7 @@ include($path_dom);
 					
 					
 						<a href="https://twitter.com/ismansiete" target="blank">
-						<h4 class="media-heading">@ismansiete</h4>
+						<h4><span class="fa-lg fa-twitter"></span> @ismansiete</h4>
 						</a>
 						<?php
 						$html_twitter = file_get_html('https://twitter.com/ismansiete'); 
@@ -107,9 +107,9 @@ include($path_dom);
 						}
 						echo '</div>'; /* row */
 						?>
-							<!--<span class="fa fa-github"></span>-->
+						
 						<a href="https://github.com/isman7" target="blank">
-						<h4 class="media-heading">isman7</h4>
+						<h4><span class="fa-lg fa-github"></span> isman7</h4>
 						</a>
 						<?php
 						$html_github = file_get_html('https://github.com/isman7');
