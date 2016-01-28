@@ -78,50 +78,64 @@ include($path_dom);
 						
 							
 						<!--<i class="fa fa-twitter"></i>-->
+						 <!-- Nav tabs -->
+						  <ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active"><a href="#twitter" aria-controls="home" role="tab" data-toggle="tab"><span class="fa-lg fa-twitter"></a></li>
+							<li role="presentation"><a href="#github" aria-controls="profile" role="tab" data-toggle="tab"><span class="fa-lg fa-github"></a></li>
+							<li role="presentation"><a href="#instagram" aria-controls="messages" role="tab" data-toggle="tab"><span class="fa-lg fa-instagram"></a></li>
+							<li role="presentation"><a href="#linkedin" aria-controls="messages" role="tab" data-toggle="tab"><span class="fa-lg fa-linkedin"></a></li>
+						  </ul>
+
+						<!-- Tab panes -->
+						  <div class="tab-content">
+							<div role="tabpanel" class="tab-pane fade in active" id="twitter">
+								</span> @ismansiete</h4>
+								</a>
+								<?php
+								$html_twitter = file_get_html('https://twitter.com/ismansiete'); 
+								$i = 0;
+								echo '<div class="row text-center">';
+								foreach($html_twitter->find('span.ProfileNav-value') as $e){
+								echo '<div class="col-lg-4">';
+								echo '<h4>'. $e->innertext . '</h4>';
+								$i++;
+									switch ($i) {
+									case 1:
+										echo '<span class="text-muted">Tweets</span></div>';
+										break 1;
+									case 2:
+										echo '<span class="text-muted">Siguiendo</span></div>';
+										break 1;
+									case 3:
+										echo '<span class="text-muted">Siguidores</span></div>';
+										break 2;
+									default:
+										break;
+									}
+								}
+								echo '</div>'; /* row */
+								?>
+							</div>
+							<div role="tabpanel" class="tab-pane fade" id="github">
+							</span> isman7</h4>
+								</a>
+								<?php
+								$html_github = file_get_html('https://github.com/isman7');
+								$i = 0;
+								echo '<div class="row text-center">';
+								foreach($html_github->find('strong.vcard-stat-count') as $e)
+								$e->outertext = '<h4>'.$e->innertext.'</h4>';
+								foreach($html_github->find('a.vcard-stat') as $e){
+								echo '<div class="col-lg-4">' . $e->innertext . '</div>';
+								}
+								echo '</div>'; /* row */
+								?>
+							</div>
+							<div role="tabpanel" class="tab-pane fade" id="instagram">ola k ase</div>
+						  </div>
+
 					
-					
-						<a href="https://twitter.com/ismansiete" target="blank">
-						<h4><span class="fa-lg fa-twitter"></span> @ismansiete</h4>
-						</a>
-						<?php
-						$html_twitter = file_get_html('https://twitter.com/ismansiete'); 
-						$i = 0;
-						echo '<div class="row text-center">';
-						foreach($html_twitter->find('span.ProfileNav-value') as $e){
-						echo '<div class="col-lg-4">';
-						echo '<h4>'. $e->innertext . '</h4>';
-						$i++;
-							switch ($i) {
-							case 1:
-								echo '<span class="text-muted">Tweets</span></div>';
-								break 1;
-							case 2:
-								echo '<span class="text-muted">Siguiendo</span></div>';
-								break 1;
-							case 3:
-								echo '<span class="text-muted">Siguidores</span></div>';
-								break 2;
-							default:
-								break;
-							}
-						}
-						echo '</div>'; /* row */
-						?>
 						
-						<a href="https://github.com/isman7" target="blank">
-						<h4><span class="fa-lg fa-github"></span> isman7</h4>
-						</a>
-						<?php
-						$html_github = file_get_html('https://github.com/isman7');
-						$i = 0;
-						echo '<div class="row text-center">';
-						foreach($html_github->find('strong.vcard-stat-count') as $e)
-						$e->outertext = '<h4>'.$e->innertext.'</h4>';
-						foreach($html_github->find('a.vcard-stat') as $e){
-						echo '<div class="col-lg-4">' . $e->innertext . '</div>';
-						}
-						echo '</div>'; /* row */
-						?>
 					</div>
 					<div class="col-md-1"></div>
 					</div>
