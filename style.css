@@ -42,6 +42,18 @@ a:focus {
 .voffset8 { margin-top: 100px; }
 .voffset9 { margin-top: 150px; }
 
+
+.nvoffset  { margin-top: -2px; }
+.nvoffset1 { margin-top: -5px; }
+.nvoffset2 { margin-top: -10px; }
+.nvoffset3 { margin-top: -15px; }
+.nvoffset4 { margin-top: -30px; }
+.nvoffset5 { margin-top: -40px; }
+.nvoffset6 { margin-top: -60px; }
+.nvoffset7 { margin-top: -80px; }
+.nvoffset8 { margin-top: -100px; }
+.nvoffset9 { margin-top: -150px; }
+
 @media screen and (max-width: 768px) {
 	.voffset9 { margin-top: 50px; }
 }
@@ -182,7 +194,7 @@ pre {
     color:#f0f0f0;
 }
 
-[class*='-codigo']:hover,[class*='-dark']:focus {
+[class*='-codigo']:hover,[class*='-codigo']:focus {
 	background-color:#f0f0f0;
     color:#222;
 }
@@ -193,19 +205,19 @@ pre {
     color:#f0f0f0;
 }
 
-[class*='-divulgacion']:hover,[class*='-dark']:focus {
+[class*='-divulgacion']:hover,[class*='-divulgacion']:focus {
 	background-color:#f0f0f0;
     color:#07C033;
 }
 
 [class*='-magia'] {
-	background-color:#6600CC;
+	background-color: #A469DE;
     color:#f0f0f0;
 }
 
-[class*='-magia']:hover,[class*='-dark']:focus {
+[class*='-magia']:hover,[class*='-magia']:focus {
 	background-color:#f0f0f0;
-    color:#6600CC;
+    color:#A469DE;
 }
 
 [class*='-reflexion'] {
@@ -213,7 +225,7 @@ pre {
     color:#f0f0f0;
 }
 
-[class*='-reflexion']:hover,[class*='-dark']:focus {
+[class*='-reflexion']:hover,[class*='-reflexion']:focus {
 	background-color:#f0f0f0;
     color:#CC0000;
 }

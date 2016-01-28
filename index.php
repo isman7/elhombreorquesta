@@ -44,10 +44,10 @@ include($path_dom);
     <link href="<?php echo get_template_directory_uri(); ?>/src/css/font-awesome.css" rel="stylesheet">
     <!-- Styles core CSS -->
     <link href="<?php echo get_template_directory_uri(); ?>/style.css" rel="stylesheet">
-    <!--Bootstrap JS-->
-    <script src="<?php echo get_template_directory_uri(); ?>/src/js/bootstrap.min.js"></script>
     <!--Jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+    <!--Bootstrap JS-->
+    <script src="<?php echo get_template_directory_uri(); ?>/src/js/bootstrap.min.js"></script>
     
     
   </head>
@@ -242,8 +242,7 @@ include($path_dom);
 	</div>
 	</div>
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+   
   </body>
 </html>
 
