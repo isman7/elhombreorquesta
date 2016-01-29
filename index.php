@@ -135,7 +135,7 @@ include($path_dom);
 <!--
 							<div role="tabpanel" class="tab-pane fade" id="linkedin">
 								<h4><strong><a href="https://www.linkedin.com/in/ismael-benito-altamirano-8a41b963">Ismael Benito Altamirano</strong></h4>
-								<?php
+								<?php /*
 								$html_linkedin = file_get_html('https://www.linkedin.com/in/ismael-benito-altamirano-8a41b963');
 								$i = 0;
 								echo '<div class="row text-center">';
@@ -146,7 +146,7 @@ include($path_dom);
 								echo '<h4>'. $e->innertext . '</h4>';
 
 								}
-								echo '</div>'; /* row */
+								echo '</div>'; /* row */ 
 								?>
 							</div>
 -->
