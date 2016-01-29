@@ -75,7 +75,9 @@ include($path_dom);
 							<li role="presentation" class="active"><a href="#user" aria-controls="user" role="tab" data-toggle="tab"><span class="fa fa-lg fa-user"></span></a></li>
 							<li role="presentation"><a href="#twitter" aria-controls="twitter" role="tab" data-toggle="tab"><span class="fa fa-lg fa-twitter"></span></a></li>
 							<li role="presentation"><a href="#github" aria-controls="github" role="tab" data-toggle="tab"><span class="fa fa-lg fa-github"></span></a></li>
+<!--
 							<li role="presentation"><a href="#linkedin" aria-controls="linkedin" role="tab" data-toggle="tab"><span class="fa fa-lg fa-linkedin"></span></a></li>
+-->
 						  </ul>
 
 						<!-- Tab panes -->
@@ -130,6 +132,7 @@ include($path_dom);
 								echo '</div>'; /* row */
 								?>
 							</div>
+<!--
 							<div role="tabpanel" class="tab-pane fade" id="linkedin">
 								<h4><strong><a href="https://www.linkedin.com/in/ismael-benito-altamirano-8a41b963">Ismael Benito Altamirano</strong></h4>
 								<?php
@@ -146,6 +149,7 @@ include($path_dom);
 								echo '</div>'; /* row */
 								?>
 							</div>
+-->
 						  </div>
 
 					
