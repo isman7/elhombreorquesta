@@ -136,6 +136,7 @@ pre {
 /* Adding more colors to buttons, labels and that stuff */
 
 /* apple colors */
+
 [class*='-dark'] {
 	background-color:#02243C;
     color:#f0f0f0;
@@ -229,4 +230,23 @@ pre {
 	background-color:#f0f0f0;
     color:#CC0000;
 }
+
+
+/* Pagination colors*/
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: #222;
+  border-color: #222;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  color: #222;
+}
+
 

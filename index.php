@@ -220,7 +220,11 @@ include($path_dom);
 								endif;
 								
 								endwhile;
+								  if ( function_exists('wp_bootstrap_pagination') ) {
+									  wp_bootstrap_pagination();
+								  }
 								?>
+								
 					
 						<?php else : ?>
 							<header class="entry-header">
