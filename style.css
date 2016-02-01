@@ -232,13 +232,13 @@ pre {
 }
 
 [class*='-recetas'] {
-	background-color:#cccc00;
-    color:#222;
+	background-color:#B8860B;
+    color:#f5deb3;
 }
 
 [class*='-recetas']:hover,[class*='-reflexion']:focus {
-	background-color:#222;
-    color:#CCCC00;
+	background-color:#f5deb3;
+    color:#B8860B;
 }
 
 /* Pagination colors*/
