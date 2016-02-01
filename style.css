@@ -231,6 +231,15 @@ pre {
     color:#CC0000;
 }
 
+[class*='-recetas'] {
+	background-color:#cccc00;
+    color:#222;
+}
+
+[class*='-recetas']:hover,[class*='-reflexion']:focus {
+	background-color:#222;
+    color:#CCCC00;
+}
 
 /* Pagination colors*/
 
