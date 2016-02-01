@@ -84,8 +84,8 @@ a:focus {
   border-bottom: 1px solid #e5e5e5;
 }
 .jumbotron .btn {
-  padding: 14px 24px;
-  font-size: 21px;
+  /* padding: 14px 24px; */
+  /* font-size: 21px; */
 }
 
 .jumbotron .container p {
@@ -248,5 +248,13 @@ pre {
 .pagination > li > span {
   color: #222;
 }
+
+
+/* Panels inside tutorials */
+
+#acordion .panel {
+    border: none;
+}
+
 
 
