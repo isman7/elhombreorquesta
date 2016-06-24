@@ -1,7 +1,7 @@
-<?php 
+<?php
 $path_dom = TEMPLATEPATH.'/src/php/simple_html_dom.php';
 
-include($path_dom); 
+include($path_dom);
 ?>
 
 <!DOCTYPE html>
@@ -11,23 +11,23 @@ include($path_dom);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="<?php if ( is_single() ) {
-        single_post_title('', true); 
+        single_post_title('', true);
     } else {
         bloginfo('name'); echo " - "; bloginfo('description');
     }
     ?>" />
     <meta name="author" content="Isman Siete (Ismael Benito)">
-    
+
     <meta name="keywords" content="<?php if ( is_single() ) {
         global $post;
 		foreach(get_the_tags($post->ID) as $tag) {
 		echo $tag->name . ', ';
 		}
     } else {
-		echo "Ismael Benito, Isman Siete, divulgación científica, magia, programación, política, reflexión";	
+		echo "Ismael Benito, Isman Siete, divulgación científica, magia, programación, política, reflexión";
     }
     ?>" />
-    
+
     <title><?php bloginfo( 'name' ); ?></title>
 
 	<!-- <link rel="icon" href="../../favicon.ico"> -->
@@ -46,17 +46,17 @@ include($path_dom);
     <!-- Styles core CSS -->
     <link href="<?php echo get_template_directory_uri(); ?>/style.css" rel="stylesheet">
     <!--Jquery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!--Bootstrap JS-->
     <script src="<?php echo get_template_directory_uri(); ?>/src/js/bootstrap.min.js"></script>
-    
-    
+
+
   </head>
 
   <body onload="prettyPrint()">
 	<div class="row">
 		<div class="col-lg-4">
-			
+
 			<div class="row">
 				<div class="col-lg-3 col-sm-1"></div>
 				<div class="col-lg-7 col-sm-9 thumbnail voffset7" id="vcard">
@@ -84,13 +84,13 @@ include($path_dom);
 						  <div class="tab-content">
 							<div role="tabpanel" class="tab-pane fade in active" id="user">
 								<h4><strong>Ismael Benito</strong></h4>
-								<?php 
-									$html_twitter = file_get_html('https://twitter.com/ismansiete'); 
+								<?php
+									$html_twitter = file_get_html('https://twitter.com/ismansiete');
 									foreach($html_twitter->find('p.ProfileHeaderCard-bio') as $e){
 										echo '<p>'. strip_tags($e->innertext) .'</p>';
 									}
 								?>
-								
+
 							</div>
 							<div role="tabpanel" class="tab-pane fade" id="twitter">
 								<h4><strong><a href="https://twitter.com/ismansiete">@ismansiete</a></strong></h4>
@@ -140,49 +140,49 @@ include($path_dom);
 								$i = 0;
 								echo '<div class="row text-center">';
 								//$eles = $html_linkedin->find('*');
-								
+
 								foreach($html_linkedin->find('div.member-connections') as $e){
-								
+
 								echo '<h4>'. $e->innertext . '</h4>';
 
 								}
-								echo '</div>'; /* row */ 
+								echo '</div>'; /* row */
 								?>
 							</div>
 -->
 						  </div>
 
-					
-						
+
+
 					</div>
 					<div class="col-md-1"></div>
 					</div>
 				</div>
 				<div class="col-md-2"></div>
 			</div>
-			
+
 		</div>
-  
-  
-		
+
+
+
 		<div class="col-lg-8" id="principal">
 			<div class="container">
 
 				<div class="jumbotron">
-				
-					
-					<?php 	$Site_url = get_site_url(); 
-							
+
+
+					<?php 	$Site_url = get_site_url();
+
 							echo "<h1><a href=" . "$Site_url" . ">";
 							bloginfo('name');
-							echo "</a></h1>"; 
+							echo "</a></h1>";
 					?>
-					
+
 					<h2><?php bloginfo( 'description' ); ?></h2>
-			  
+
 					<div class="container voffset8">
 						<?php if ( have_posts() ) : ?>
-			
+
 							<?php /* Start the Loop */ ?>
 							<?php  while ( have_posts() ) : the_post();
 								$Path = get_permalink();
@@ -204,8 +204,8 @@ include($path_dom);
 								echo "<div class='row text-justify'>";
 								the_content();
 								echo "</div>&nbsp;";
-								
-								if (is_single()): 
+
+								if (is_single()):
 									echo "<div class='row text-justify'>";
 									the_tags();
 									echo "</div>&nbsp;";
@@ -216,39 +216,39 @@ include($path_dom);
 									echo "<div class='col-lg-5'></div>";
 									next_post_link();
 									echo "</div>";
-								
+
 								endif;
-								
+
 								endwhile;
 								  if ( function_exists('wp_bootstrap_pagination') ) {
 									  wp_bootstrap_pagination();
 								  }
 								?>
-								
-					
+
+
 						<?php else : ?>
 							<header class="entry-header">
 								<h1 class="entry-title"> 404 </h1>
 							</header>
-			
+
 							<div class="entry-content">
-								<p>No te emociones, ¡qué aun estoy construyendo el Blog!</p> 
-								<p>Tomo nota, crear: 
-								
+								<p>No te emociones, ¡qué aun estoy construyendo el Blog!</p>
+								<p>Tomo nota, crear:
+
 								<?php $Path = "http://" .  $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]  . "/";
-								
+
 									echo "<a href='$Path'> $Path </a>";
-								
+
 								?></p>
-								
+
 							</div><!-- .entry-content -->
-					
-						
+
+
 					<?php endif; // end have_posts() check ?>
-					</div> 
-		  
+					</div>
+
 			  </div>
-		
+
 
 	<footer class="footer">
 	<p>
@@ -260,7 +260,7 @@ include($path_dom);
 		<div class="col-lg-6">
 		<p>
 		<?php 	$user_info = get_userdata(1);
-				
+
 				$first_name = $user_info->first_name;
 				$last_name = $user_info->last_name;
 				echo "$first_name $last_name. ";
@@ -269,26 +269,18 @@ include($path_dom);
 		Basado en Wordpress y Bootstrap.</p>
 		</div>
 	</p>
-	</footer> 
+	</footer>
 
 
     </div> <!-- /container -->
-	
+
 	</div>
 	</div>
 
 	<script>
-		$('#tabAll').click(function(){
-		  $('#tabAll').addClass('active');  
-		  $('#steps .tab-pane').each(function(i,t){
-			$('#steps li').removeClass('active'); 
-			$(this).addClass('active in');  
-		  });
-		});
+
 	</script>
 
 
   </body>
 </html>
-
-
