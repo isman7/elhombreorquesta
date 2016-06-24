@@ -39,7 +39,7 @@ include($path_dom);
     <script src="<?php echo get_template_directory_uri(); ?>/src/js/prettify.js"></script>
     <!-- Bootstrap CSS -->
     <link href="<?php echo get_template_directory_uri(); ?>/src/css/bootstrap.css" rel="stylesheet">
-    <link href="<?php echo get_template_directory_uri(); ?>/src/css/bootstrap-theme.css" rel="stylesheet">
+    <!--<link href="<?php echo get_template_directory_uri(); ?>/src/css/bootstrap-theme.css" rel="stylesheet">-->
     <!-- Font-Awesome CSS -->
     <!-- <link href="<?php echo get_template_directory_uri(); ?>/src/css/font-awesome.css" rel="stylesheet"> -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
