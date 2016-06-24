@@ -277,9 +277,7 @@ include($path_dom);
 	</div>
 	</div>
 
-	<script>
-
-	</script>
+	<script src="<?php echo get_template_directory_uri(); ?>/src/js/elhombreorquesta.js"></script>
 
 
   </body>
