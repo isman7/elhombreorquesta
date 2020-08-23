@@ -42,7 +42,7 @@ include($path_dom);
     <!--<link href="<?php echo get_template_directory_uri(); ?>/src/css/bootstrap-theme.css" rel="stylesheet">-->
     <!-- Font-Awesome CSS -->
     <!-- <link href="<?php echo get_template_directory_uri(); ?>/src/css/font-awesome.css" rel="stylesheet"> -->
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <!-- Styles core CSS -->
     <link href="<?php echo get_template_directory_uri(); ?>/style.css" rel="stylesheet">
     <!--Jquery-->
