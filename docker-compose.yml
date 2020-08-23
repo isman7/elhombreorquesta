@@ -26,5 +26,17 @@ services:
       WORDPRESS_DB_NAME: wordpress
     volumes:
       - .:/var/www/html/wp-content/themes/elhombreorquesta.net
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: somewordpress
+    ports:
+      - 8080:80
+    links:
+      - db:db
+
 volumes:
   db_data: {}
