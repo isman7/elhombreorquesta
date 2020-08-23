@@ -1,5 +1,5 @@
 <?php
-$path_dom = TEMPLATEPATH.'/src/php/simple_html_dom.php';
+$path_dom = get_template_directory_uri() . '/vendor/sunra/php-simple-html-dom-parser/Src/Sunra/PhpSimple/simplehtmldom_1_5/simple_html_dom.php';
 
 include($path_dom);
 ?>
@@ -33,22 +33,20 @@ include($path_dom);
 	<!-- <link rel="icon" href="../../favicon.ico"> -->
 
 	<!--Google Fonts-->
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href="<?php echo get_template_directory_uri() . '/vendor/webfontkit/open-sans/open-sans.min.css'; ?>" rel='stylesheet' type='text/css'>
 	<!--Prettify CSS-->
-    <link href="<?php echo get_template_directory_uri(); ?>/src/css/prettify.css" type="text/css" rel="stylesheet" />
-    <script src="<?php echo get_template_directory_uri(); ?>/src/js/prettify.js"></script>
+    <link href="<?php echo get_template_directory_uri() . '/vendor/code-prettify/prettify/prettify.css'; ?>" type="text/css" rel="stylesheet" />
+    <script src="<?php echo get_template_directory_uri() . '/vendor/code-prettify/prettify/prettify.js'; ?>"></script>
     <!-- Bootstrap CSS -->
-    <link href="<?php echo get_template_directory_uri(); ?>/src/css/bootstrap.css" rel="stylesheet">
-    <!--<link href="<?php echo get_template_directory_uri(); ?>/src/css/bootstrap-theme.css" rel="stylesheet">-->
+    <link href="<?php echo get_template_directory_uri() . '/vendor/twbs/bootstrap/dist/css/bootstrap.css'; ?>" rel="stylesheet">
     <!-- Font-Awesome CSS -->
-    <!-- <link href="<?php echo get_template_directory_uri(); ?>/src/css/font-awesome.css" rel="stylesheet"> -->
-    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+     <link href="<?php echo get_template_directory_uri() . '/vendor/fortawesome/font-awesome/css/font-awesome.min.css'; ?>" rel="stylesheet">
     <!-- Styles core CSS -->
-    <link href="<?php echo get_template_directory_uri(); ?>/style.css" rel="stylesheet">
+    <link href="<?php echo get_template_directory_uri() . '/style.css'; ?>" rel="stylesheet">
     <!--Jquery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="<?php echo get_template_directory_uri() . '/vendor/components/jquery/jquery.min.js'; ?>"></script>
     <!--Bootstrap JS-->
-    <script src="<?php echo get_template_directory_uri(); ?>/src/js/bootstrap.min.js"></script>
+    <script src="<?php echo get_template_directory_uri() . '/vendor/twbs/bootstrap/dist/js/bootstrap.js'; ?>"></script>
 
 
   </head>
@@ -277,7 +275,7 @@ include($path_dom);
 	</div>
 	</div>
 
-	<script src="<?php echo get_template_directory_uri(); ?>/src/js/elhombreorquesta.js"></script>
+	<script src="<?php echo get_template_directory_uri() . 'functions.js'; ?>"></script>
 
 
   </body>

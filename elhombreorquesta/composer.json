@@ -1,0 +1,24 @@
+{
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "code-prettify/prettify",
+                "version": "1.0.0",
+                "dist": {
+                    "url": "https://github.com/googlearchive/code-prettify/blob/master/distrib/prettify-small.zip?raw=true",
+                    "type": "zip"
+                }
+            }
+        }
+    ],
+
+    "require": {
+        "twbs/bootstrap": "3.4.1",
+        "fortawesome/font-awesome": "4.7.0",
+        "webfontkit/open-sans": "^1.0",
+        "components/jquery": "^2",
+        "code-prettify/prettify": "1.0.0",
+        "sunra/php-simple-html-dom-parser": "^1.5"
+    }
+}
