@@ -31,3 +31,5 @@
 
 
 </head>
+
+<body onload="prettyPrint()">

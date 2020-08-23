@@ -100,6 +100,9 @@ function wp_add_vendors() {
     // elHombreOrquesta custom styles:
     wp_enqueue_style("eho-style",  get_template_directory_uri() . '/style.css');
 
+    // elHombreOrquesta custom scripts:
+    wp_enqueue_script("eho-script", get_template_directory_uri() . '/functions.js', array(), false, true);
+
 }
 
 add_action( 'wp_enqueue_scripts', 'wp_add_vendors' );
