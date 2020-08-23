@@ -81,5 +81,27 @@ function wp_bootstrap_pagination( $args = array() ) {
         echo $args['before_output'] . $echo . $args['after_output'];
 }
 
+function wp_add_vendors() {
+    // Wordpress Handles OpenSans font and jQuery:
+    wp_enqueue_style("open-sans");
+    wp_enqueue_script("jquery");
+
+    // Prettify
+    wp_enqueue_style("prettify", get_template_directory_uri() . '/vendor/code-prettify/prettify/prettify.css');
+    wp_enqueue_script("prettify-script", get_template_directory_uri() . '/vendor/code-prettify/prettify/prettify.js');
+
+    // Font-Awesome
+    wp_enqueue_style("font-awesome", get_template_directory_uri() . '/vendor/fortawesome/font-awesome/css/font-awesome.min.css');
+
+    // Bootstrap
+    wp_enqueue_style("bootstrap", get_template_directory_uri() . '/vendor/twbs/bootstrap/dist/css/bootstrap.css');
+    wp_enqueue_script("bootstrap-script", get_template_directory_uri() . '/vendor/twbs/bootstrap/dist/js/bootstrap.js');
+
+    // elHombreOrquesta custom styles:
+    wp_enqueue_style("eho-style",  get_template_directory_uri() . '/style.css');
+
+}
+
+add_action( 'wp_enqueue_scripts', 'wp_add_vendors' );
 
 ?>

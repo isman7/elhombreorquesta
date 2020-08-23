@@ -2,54 +2,9 @@
 $path_dom = get_template_directory_uri() . '/vendor/sunra/php-simple-html-dom-parser/Src/Sunra/PhpSimple/simplehtmldom_1_5/simple_html_dom.php';
 
 include($path_dom);
+
+get_header();
 ?>
-
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="<?php if ( is_single() ) {
-        single_post_title('', true);
-    } else {
-        bloginfo('name'); echo " - "; bloginfo('description');
-    }
-    ?>" />
-    <meta name="author" content="Isman Siete (Ismael Benito)">
-
-    <meta name="keywords" content="<?php if ( is_single() ) {
-        global $post;
-		foreach(get_the_tags($post->ID) as $tag) {
-		echo $tag->name . ', ';
-		}
-    } else {
-		echo "Ismael Benito, Isman Siete, divulgación científica, magia, programación, política, reflexión";
-    }
-    ?>" />
-
-    <title><?php bloginfo( 'name' ); ?></title>
-
-	<!-- <link rel="icon" href="../../favicon.ico"> -->
-
-	<!--Google Fonts-->
-	<link href="<?php echo get_template_directory_uri() . '/vendor/webfontkit/open-sans/open-sans.min.css'; ?>" rel='stylesheet' type='text/css'>
-	<!--Prettify CSS-->
-    <link href="<?php echo get_template_directory_uri() . '/vendor/code-prettify/prettify/prettify.css'; ?>" type="text/css" rel="stylesheet" />
-    <script src="<?php echo get_template_directory_uri() . '/vendor/code-prettify/prettify/prettify.js'; ?>"></script>
-    <!-- Bootstrap CSS -->
-    <link href="<?php echo get_template_directory_uri() . '/vendor/twbs/bootstrap/dist/css/bootstrap.css'; ?>" rel="stylesheet">
-    <!-- Font-Awesome CSS -->
-     <link href="<?php echo get_template_directory_uri() . '/vendor/fortawesome/font-awesome/css/font-awesome.min.css'; ?>" rel="stylesheet">
-    <!-- Styles core CSS -->
-    <link href="<?php echo get_template_directory_uri() . '/style.css'; ?>" rel="stylesheet">
-    <!--Jquery-->
-    <script src="<?php echo get_template_directory_uri() . '/vendor/components/jquery/jquery.min.js'; ?>"></script>
-    <!--Bootstrap JS-->
-    <script src="<?php echo get_template_directory_uri() . '/vendor/twbs/bootstrap/dist/js/bootstrap.js'; ?>"></script>
-
-
-  </head>
 
   <body onload="prettyPrint()">
 	<div class="row">
